@@ -41,6 +41,15 @@ define Device/embedfire_lubancat-1n
 endef
 TARGET_DEVICES += embedfire_lubancat-1n
 
+define Device/radxa_zero-3e
+  DEVICE_VENDOR := RADXA
+  DEVICE_MODEL := ZERO-3E
+  SOC := rk3566
+  BOOT_FLOW := pine64-img
+  DEVICE_PACKAGES := kmod-r8169 -urngd kmod-ata-ahci
+endef
+TARGET_DEVICES += radxa_zero-3e
+
 define Device/embedfire_lubancat-2
   DEVICE_VENDOR := EmbedFire
   DEVICE_MODEL := LubanCat-2
@@ -194,3 +203,4 @@ define Device/friendlyarm_nanopi-r6c
   DEVICE_PACKAGES := kmod-hwmon-pwmfan kmod-mt7921e kmod-r8125 wpad-openssl
 endef
 TARGET_DEVICES += friendlyarm_nanopi-r6c
+

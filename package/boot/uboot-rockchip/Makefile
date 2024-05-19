@@ -107,6 +107,13 @@ define U-Boot/lubancat-1n-rk3566
     embedfire_lubancat-1n
 endef
 
+define U-Boot/zero-3e-rk3566
+  $(U-Boot/Default/rk3566)
+  NAME:=ZERO-3E
+  BUILD_DEVICES:= \
+    radxa_zero-3e
+endef
+
 # RK3568 boards
 
 define U-Boot/Default/rk3568
@@ -239,6 +246,7 @@ UBOOT_TARGETS := \
   lubancat-2n-rk3568 \
   lubancat-4-rk3588s \
   lubancat-5-rk3588 \
+  zero-3e-rk3566 \
   h88k-rk3588
 
 UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes
